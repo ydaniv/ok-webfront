@@ -1,5 +1,5 @@
 {
-    "name": "application-name"
+    "name": "open-knesset-webfront"
   , "version": "0.0.1"
   , "private": true
   , "dependencies": {
