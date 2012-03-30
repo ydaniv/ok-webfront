@@ -1,6 +1,11 @@
-!!!
-html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body!= body
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{>title}}</title>
+        <link rel="stylesheet" href="/static/css/bootstrap-rtl.css"/>
+        <link rel="stylesheet" href="/static/css/common.css"/>
+    </head>
+<body>
+    {{>body}}
+</body>
+</html>

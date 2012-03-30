@@ -4,7 +4,8 @@
  */
 
 var express = require('express')
-  , routes = require('./routes');
+    , hogan = require('hogan.js')
+    , routes = require('./routes');
 
 var app = module.exports = express.createServer();
 
@@ -12,11 +13,23 @@ var app = module.exports = express.createServer();
 
 app.configure(function(){
   app.set('views', __dirname + '/views');
-  app.set('view engine', 'jade');
+  app.set('view engine', 'mustache');
+  app.set('view options',{layout:false});
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
+    
+  // Registering modules
+
+  app.register('mustache', {
+    compile: function() {
+      var t = hogan.compile.apply(hogan, arguments);
+        return function() {
+          return t.render.apply(t, arguments);
+        }
+      }
+    });
 });
 
 app.configure('development', function(){
