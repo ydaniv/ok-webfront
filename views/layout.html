@@ -21,21 +21,50 @@
   {{extrahead}}
 </head>
 <body>
-  <!-- Base Header -->
+
+  {{#DEBUG}}
+  <div class="alert-info">
+    <a href="http://oknesset.org/">http://oknesset.org/</a>
+  </div>
+  {{/DEBUG}}
   <div class="navbar navbar-fixed-top"><div class="navbar-inner">
     <div class="container-fluid">
       <a class="brand" style="margin:5px; background:white; width:80px; padding:3px;" href="{{main_url}}">
         <img src ="/img/oknesset-logo-small.png" alt="{{#_}}Open Knesset{{/_}}"/>
       </a>
       <div id="search" class="pull-right navbar-search">{{search_form}}</div>
-      {{>partials/green}}
+
+      <ul class="nav pull-right">
+        {{#user}}
+        <li><a href="#profile">{{#_}}Logged in as{{/_}} {{name}}</a></li>
+        <li><a href="#edit_profile">{{#_}}Edit Profile{{/_}}</a></li>
+        <li><a href="#logout">{{#_}}Logout{{/_}}</a></li>
+        {{/user}}
+        {{^user}}
+        <li><a href="#login">{{#_}}login{{/_}}</a></li>
+        {{/user}}
+      </ul>
+
       <ul class="nav">
         <li id="laws_link"><a href="#legislation">{{#_}}Legislation{{/_}}</a></li>
         <li id="mks_link"><a href="#members">{{#_}}Members{{/_}}</a></li>
       </ul>
     </div></div>
   </div>
-  <!-- // Base Header -->
-  {{{ body }}}
+
+  <div id="main" class="container-fluid">
+    {{{ body }}}
+  </div>
+
+  <div class="container-fluid">
+    <div class="footer">
+      <p><a href="{{about_url}}">{{#_}}Some rights reserved.{{/_}}</a></p>
+    </div>
+  </div>
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/mustache.js"></script>
+  <script src="/js/Gettext.js"></script>
+
 </body>
 </html>
