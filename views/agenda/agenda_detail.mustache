@@ -1,0 +1,108 @@
+    <h1>{{name}}</h1>
+    <div id="agenda-info">
+        <div>
+            <h3>{{#_}}Edited by{{/_}}</h3>
+            {{#editors}}
+                {{> user}}
+            {{/editors}}
+        </div>
+        <div style="margin-bottom:4em;">
+            <h2>{{#_}}Description{{/_}}</h2>
+            {{description}}
+        </div>
+
+        <div style="display:inline-block">
+            <h3>{{#_}}Members{{/_}}</h3>
+            <div class="list-wrap">
+            {{^all_mks}}
+                <a href="?all_mks">{{#_}}Click here to see the full list.{{/_}}</a>
+            {{/all_mks}}
+            <table>
+                <tr>
+                    <td colspan="3" style="text-align:center">{{#_}}Agenda MKs{{/_}}</td>
+                </tr>
+                {{#mks}}
+                    {{> mk_list_item}}
+                {{/mks}}
+            {{^all_mks}}
+                <tr>
+                    <td colspan="3" style="text-align:center">{{#_}}Agenda Top MKs{{/_}}</td>
+                </tr>
+                {{#selected_mks_top}}
+                    {{> mk_list_item}}
+                {{/selected_mks_top}}
+                <tr>
+                    <td colspan="3" style="text-align:center">{{#_}}Agenda Bottom MKs{{/_}}</td>
+                </tr>
+                {{#selected_mks_bottom}}
+                    {{> mk_list_item}}
+                {{/selected_mks_bottom}}
+            {{/all_mks}}
+            </table>
+        </div>
+        <div style="display:inline-block; margin-right:4em;">
+            <h3>{{#_}}Parties{{/_}}</h3>
+            <p>{{#_}}Click the # to highlight MKs from this party{{/_}}</p>
+            <div class="list-wrap">
+                <table>
+                {{#selected_parties}}
+                    <tr>
+                        <td><a id="party-highlight-{{id}}" href="#">#</a><a class="hashnav item dontwrap" id="party-link-{{id}}" href="{{url}}">{{name}}</a></td>
+                        <td class="numeric">{{score}}%</td>
+                        <td>
+                            <div id="selected_party_{{id}}_percentile" value ="{{percentile}}"class="percentile {{#opposition}}percentile_against{{/opposition}}"></div>
+                        </td>
+                        </tr>
+                {{/selected_parties}}
+                </table>
+            </div>
+        </div>
+
+        <div class="item-list">
+
+        <h2> {{#_}}Ascribed Votes{{/_}}</h2>
+        <table id="agenda-votes">
+            {{#agenda_votes}}
+                <tr>
+                    <td>
+                        <div class="agenda-importance">{{importance}}</div>
+                        <div class="agenda-score {{#positive}}positive{{/positive}}{{#negative}}negative{{/negative}}">
+                            {{score}}
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item">
+                            {{> vote_list_item}}
+                            <span class="reasoning">
+                                {{{reasoning}}}
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+            {{/agenda_votes}}
+        </table>
+        </div>
+
+        <div class="item-list">
+            <h2>{{#_}}Ascribed Committee Meetings{{/_}}</h2>
+            <table id="agenda-meetings">
+                {{#agendameetings}}
+                    <tr>
+                        <td>
+                            <div class="agenda-score positive">
+                                {{score}}
+                            </div>
+                        </td>
+                        <td>
+                            <div class="item">
+                                {{> committee_meeting_list_item}}
+                                <span class="reasoning">
+                                    {{reasoning}}
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                {{/agendameetings}}
+            </table>
+        </div>
+    </div>

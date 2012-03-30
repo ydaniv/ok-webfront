@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-03-25 11:46+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Benny Daon<benny@yeda.us>\n"
+"Language-Team: Hebrew\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/agendas/agenda_detail.mustache.py:4
+msgid "Edited by"
+msgstr ""
+
+#: templates/agendas/agenda_detail.mustache.py:10
+msgid "Description"
+msgstr ""
+
+#: templates/agendas/agenda_detail.mustache.py:18
+msgid "Click here to see the full list."
+msgstr ""
+
+#: templates/agendas/agenda_detail.mustache.py:23
+msgid "Agenda MKs"
+msgstr ""
+
+#: templates/agendas/agenda_detail.mustache.py:31
+msgid "Agenda Top MKs"
+msgstr ""
+
+#: templates/agendas/agenda_detail.mustache.py:38
+msgid "Agenda Bottom MKs"
+msgstr ""
+
+#: templates/agendas/agenda_detail.mustache.py:47
+msgid "Parties"
+msgstr ""
+
+#: templates/agendas/agenda_detail.mustache.py:48
+msgid "Click the # to highlight MKs from this party"
+msgstr ""
+
+#: templates/agendas/agenda_detail.mustache.py:74
+msgid "Ascribed Votes"
+msgstr ""
+
+#: templates/agendas/agenda_detail.mustache.py:98
+msgid "Ascribed Committee Meetings"
+msgstr ""
+
+#~ msgid "Open Knesset"
+#~ msgstr "כנסת פתוחה"
+
+#~ msgid "Some rights reserved."
+#~ msgstr "חלק מהזכויות שמורות"
+
+#~ msgid "Edit Profile"
+#~ msgstr "ערוך פרופיל"
+
+#~ msgid "Logout"
+#~ msgstr "התנתקות"
+
+#~ msgid "login"
+#~ msgstr "התחברות"
+
+#~ msgid "Legislation"
+#~ msgstr "חקיקה"
+
+#~ msgid "Members"
+#~ msgstr "חברי כנסת"

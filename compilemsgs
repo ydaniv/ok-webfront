@@ -1,0 +1,2 @@
+#!/bin/sh
+msgfmt -o locale/he/LC_MESSAGES/mustache.mo locale/he/LC_MESSAGES/mustache.po

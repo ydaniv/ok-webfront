@@ -1,0 +1,30 @@
+<div class="vote-list-item">
+    {{#show_time}}{{time}}{{/show_time}}
+    <a id="detail-{{id}}" href="{{url}">
+    {{title}}<br/>
+    <div class="info">
+        <table>
+            <tr>
+                <td>{{#_}}For{{/_}}:</td>
+                <td>{{for_votes_count}}</td>
+                <td class="column-bar" length="{{for_votes_count}}"</td>
+            </tr>
+            <tr>
+                <td>{{#_}}Against{{/_}}:</td>
+                <td>{{against_votes_count }}</td>
+                <td class="column-bar" length="{{agains_votes_count}}"</td>
+            </tr>
+        </table>
+        <p><a href="#vote_detail:{{id}}" class="more">{{#_}}more{{/_}}</a></p>
+    </div>
+    </a>
+    <div class="item-metadata">
+        {{#tags}}            
+            {{> show_tag}}
+        {{/tags}}
+    </div>
+    {{#watched_members}}
+        <div class="member-stand-{{stand}}" >{{name}}: {{stand}}</div>
+    {{/watched_members}}
+</div>
+

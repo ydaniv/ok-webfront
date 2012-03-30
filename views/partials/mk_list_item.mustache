@@ -1,0 +1,10 @@
+    in mk_list_item
+<tr>
+    <td><a class="hashnav item dontwrap party-{{party_id}}" title="{{party_name}}" id="detail-{{id}}" href="{{url}}">{{name}}</a></td>
+    <td class="numeric">{{score}}%</td>
+    <td>
+        <div id="selected_mk_{{id}_percentile" class="percentile {{#opposition}}percentile_against{{/opposition}}"></div>
+        <script>set_percentile('selected_mk_{{id}}',{{precentile}});</script>
+    </td>
+</tr>
+
