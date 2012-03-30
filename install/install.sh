@@ -1,5 +1,12 @@
 #!/bin/bash
 
+## Installs Node.js (only Ubuntu) and NPM packages for project
+## Under Ubuntu, will use bundled DEB package
+## Under Mac OS X will ask to download the Node.js installer
+## No Windows support at the moment
+## Once Node.js and NPM are installed under /usr/local will install project npm dependencies
+## Reads node version from NODE_VERSION
+
 BASE_DIR="$( cd $( dirname $0 ) && pwd | awk '{gsub(/\/install/,"")}1' )"
 NODE_VERSION="$( cat $BASE_DIR/install/NODE_VERSION )"
 

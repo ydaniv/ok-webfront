@@ -5,7 +5,12 @@
 #
 # Thank you: Alexey Kupershtokh
 #
+# Installs Node.js & NPM on Ubuntu from source
+# Creates a DEB package under /usr/local/src/node_install
+# Reads Node.js version to use from NODE_VERSION
+#
 ##############################################################
+
 # Update System
 BASE_DIR="$( cd $( dirname $0 ) && pwd | awk '{gsub(/\/install/,"")}1' )"
 NODE_VERSION="$( cat $BASE_DIR/install/NODE_VERSION )"
