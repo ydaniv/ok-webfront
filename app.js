@@ -38,6 +38,8 @@ app.configure('production', function(){
 app.get('/', routes.index);
 app.get('/bills', routes.bills.index);
 app.get('/bills/:id', routes.bills.show);
+app.get('/agendas', routes.agendas.index);
+app.get('/agendas/:id', routes.agendas.show);
 
 // Run as cluster (node.js is web scale!)
 if (cluster.isMaster) {

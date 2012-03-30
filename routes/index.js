@@ -8,3 +8,4 @@ exports.index = function(req, res){
 };
 
 exports.bills = require('./bills');
+exports.agendas = require('./agendas');
