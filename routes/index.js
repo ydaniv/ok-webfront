@@ -7,5 +7,5 @@ exports.index = function(req, res){
   res.render('index', { title: 'Express' })
 };
 
-exports.bills = require('./bills');
 exports.agendas = require('./agendas');
+exports.bills = require('./bills');
