@@ -5,40 +5,6 @@
     {{> base_header}}
     <div id="main" class="container-fluid">
     </div>
-    <script id="main-mustache" type="text/html">
-      %(template)s
-    </script>
     {{> base_footer}}
-    <script>
-      document.context = %(context)s;
-      document.partials = %(partials)s;
-
-      function render () {
-        try {
-            var html = Mustache.render($("#main-mustache").html(), 
-                                       document.context,
-                                       document.partials);
-        } catch (e) {
-            $("#main").html('<h1>Mustache rendering error</h1>'+e);
-        }
-        $("#main").html(html);
-        // the next line comes from python and is the app's script
-        %(app)s
-      }
-
-      function get_part(i) {
-        var keys = Object.keys(document.partials);
-        var key = keys[i];
-        $.get(document.partials[key], function (src) {
-            document.partials[key] = src;
-            if (i < keys.length)
-                get_part(i+1);
-            else
-                render();
-        });
-      }
-            
-      get_part(0);
-
-    </script>
-</body></html>
+</body>
+</html>
