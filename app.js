@@ -5,7 +5,9 @@
 
 var express = require('express')
     , hulk = require('hulk-hogan')
-    , routes = require('./routes');
+    , routes = require('./routes')
+    , cluster = require('cluster')
+    , nconf = require('nconf');
 
 var app = module.exports = express.createServer();
 
@@ -39,5 +41,18 @@ app.get('/bills/:id', routes.bills.show);
 app.get('/agendas', routes.agendas.index);
 app.get('/agendas/:id', routes.agendas.show);
 
-app.listen(3000);
-console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
+// Run as cluster (node.js is web scale!)
+if (cluster.isMaster) {
+  // Fork workers.
+  var numCPUs = require('os').cpus().length;
+  for (var i = 0; i < numCPUs; i++) {
+    cluster.fork();
+  }
+
+  cluster.on('death', function(worker) {
+    console.log('worker ' + worker.pid + ' died');
+  });
+} else {
+  console.log("worker: %s", process.env.NODE_WORKER_ID);
+  app.listen(nconf.get('port') || 3000);
+}
