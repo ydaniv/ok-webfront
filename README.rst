@@ -10,21 +10,22 @@ the design and send a pull request
 Quick Start
 -----------
 
-* Clone the repo: ``git clone git@github.com:ydaniv/ok-webfront.git``
-* if you don't have python installed (you can test for it by typing 
-  ``python`` on your prompt) get it from http://www.python.org/download/.
-  Version 2.7.2 is best
-* Change your working directory to the project's: ``cd ok-webfront``
-* Start the local server: ``python server.py``
-* Browse to http://localhost:8000/agenda/1;s
+
+Fork the repo: ``ok-templates.git`` by using the *Fork* button on github and::
+
+    $ git clone git@github.com:yourusername/ok-templates.git
+    $ cd ok-webfront
+    $ sudo ./install/install.sh
+    $ node app.js
+
+and point your broser at http://localhost:3000
 
 Designing
 ---------
 
-the templates themselves are located at the ``templates`` folder and written in 
-Mustache_ logicless templating language.  The templates have a ``.mustache``
-ending and are rendered using a context based on a general `context.yaml`` 
-on the project's root and a template specific json file.
+the templates themselves are located at the ``views`` folder and written in 
+Mustache_ logicless templating language.  The templates have a ``.html``
+file suffix.
 
 Sample
 ------
