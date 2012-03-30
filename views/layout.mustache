@@ -9,11 +9,12 @@
   <meta http-equiv="Content-Language" content="{{LANGUAGE_CODE}}" />
   <meta NAME="ROBOTS" content="NOINDEX, NOFOLLOW" />
 
-  <link href="{{MEDIA_URL}}css/jquery.jgrowl.css" rel="stylesheet" type="text/css" media="screen" />
-  <link href="{{MEDIA_URL}}css/bootstrap-rtl.css?v=1" rel="stylesheet" type="text/css" media="screen" />
-  <link href="{{MEDIA_URL}}css/common.css?v=1" rel="stylesheet" type="text/css" media="screen" />
-  <link rel="shortcut icon" href="{{MEDIA_URL}}/img/favicon.png" />
-  <link rel="gettext" type="application/x-po" href="locale/he/LC_MESSAGES/mustache.po" />
+  <base href="{{MEDIA_URL}}" />
+  <link href="/css/jquery.jgrowl.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="/css/bootstrap-rtl.css?v=1" rel="stylesheet" type="text/css" media="screen" />
+  <link href="/css/common.css?v=1" rel="stylesheet" type="text/css" media="screen" />
+  <link rel="shortcut icon" href="/img/favicon.png" />
+  <link rel="gettext" type="application/x-po" href="/locale/he/LC_MESSAGES/mustache.po" />
   <style>
     body { padding-top:86px;}
   </style>
@@ -24,10 +25,10 @@
   <div class="navbar navbar-fixed-top"><div class="navbar-inner">
     <div class="container-fluid">
       <a class="brand" style="margin:5px; background:white; width:80px; padding:3px;" href="{{main_url}}">
-        <img src ="{{MEDIA_URL}}/img/oknesset-logo-small.png" alt="{{#_}}Open Knesset{{/_}}"/>
+        <img src ="/img/oknesset-logo-small.png" alt="{{#_}}Open Knesset{{/_}}"/>
       </a>
       <div id="search" class="pull-right navbar-search">{{search_form}}</div>
-      {{>login_toolbar}}
+      {{>partials/login_toolbar}}
       <ul class="nav">
         <li id="laws_link"><a href="#legislation">{{#_}}Legislation{{/_}}</a></li>
         <li id="mks_link"><a href="#members">{{#_}}Members{{/_}}</a></li>
