@@ -28,7 +28,7 @@
         <img src ="/img/oknesset-logo-small.png" alt="{{#_}}Open Knesset{{/_}}"/>
       </a>
       <div id="search" class="pull-right navbar-search">{{search_form}}</div>
-      {{>partials/login_toolbar}}
+      {{>partials/green}}
       <ul class="nav">
         <li id="laws_link"><a href="#legislation">{{#_}}Legislation{{/_}}</a></li>
         <li id="mks_link"><a href="#members">{{#_}}Members{{/_}}</a></li>
