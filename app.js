@@ -40,6 +40,8 @@ app.get('/bills', routes.bills.index);
 app.get('/bills/:id', routes.bills.show);
 app.get('/agendas', routes.agendas.index);
 app.get('/agendas/:id', routes.agendas.show);
+app.get('/parties', routes.parties.index);
+app.get('/parties/:id', routes.parties.show);
 
 // Run as cluster (node.js is web scale!)
 if (cluster.isMaster) {

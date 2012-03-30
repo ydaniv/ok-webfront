@@ -298,14 +298,14 @@ form > p > select { width:250px; }
 #public-opinion form {display:inline-block; width:49%}
 #public-opinion input {width:100%}
 #content-main .vote-up {
-    background: url('/static/img/Thumbs-up.png') no-repeat center 0;
+    background: url('/public/img/Thumbs-up.png') no-repeat center 0;
     padding-left: 1.1em;
     padding-right: 1.1em;
     padding-top:0.5em;
     padding-bottom:0.5em;
 }
 #content-main .vote-down {
-    background: url('/static/img/Thumbs-down.png') no-repeat center 0;
+    background: url('/public/img/Thumbs-down.png') no-repeat center 0;
     padding-left: 1.1em;
     padding-right: 1.1em;
     padding-top:0.5em;
@@ -534,7 +534,7 @@ p.username {max-width:55px; }
 #main-about, #main-hasadna, #main-help {float: left; text-align:center; margin:1em 0 1em 3%; padding:1em;width:28%}
 #main-about { text-align:justify;}
 #main-news { width:500px; margin:1em 3% 1em 1em;float:right;
-    text-align: center; background: url('/static/img/embed_hover.png') repeat-x; }
+    text-align: center; background: url('/public/img/embed_hover.png') repeat-x; }
 #main-help { line-height:150%; text-align:center; }
 #main-hasadna { text-align: right; }
 #main-hasadna a { padding: 0; }
@@ -686,7 +686,7 @@ div.post {margin-top:1em; padding-top:1em; border-top: 1px solid #888;
 #visible-bill-stage {min-height:120px; margin-bottom:1em; padding-right:1em}
 
 .awesome-button, .awesome-button:visited {
-    background: #222 url(/static/img/overlay.png) repeat-x;
+    background: #222 url(/public/img/overlay.png) repeat-x;
     display: inline-block;
     padding: 5px 10px 6px;
     color: #fff;
@@ -785,7 +785,7 @@ div.mk-card>a { padding:0px; }
 .datelookup { float: left; }
 #content-main .watched {
     display:inline;
-    background: url('/static/img/Search.png') no-repeat left 0;
+    background: url('/public/img/Search.png') no-repeat left 0;
     padding: 0.5em 3em 0.5em 2.5em;
 }
 #content-main .person-link { font-weight:normal }
@@ -802,12 +802,12 @@ a.permalink { font-size: 0.8em; padding: 0 4px 0 4px; text-decoration: none; vis
     white-space: nowrap;
     width:100px;
     height:16px;
-    background:url(/static/img/bar.png) no-repeat;
+    background:url(/public/img/bar.png) no-repeat;
     background-color:#E6F1F7;
 }
 
 .percentile_against {
-    background:url(/static/img/bar-against.png) no-repeat;
+    background:url(/public/img/bar-against.png) no-repeat;
     background-color:#E6F1F7;
 }
 
@@ -817,7 +817,7 @@ a.permalink { font-size: 0.8em; padding: 0 4px 0 4px; text-decoration: none; vis
     text-align:center;
     width:100px;
     height:16px;
-    background:url(/static/img/bar.png) no-repeat;
+    background:url(/public/img/bar.png) no-repeat;
     background-color:#E6F1F7;
 }
 
@@ -1010,13 +1010,13 @@ div.general_discipline_control {
 .votes_against_own_bills.expand_button,
 .factional_discipline_control.expand_button,
 .general_discipline_control.expand_button{
-    background:url(/static/img/bullet_toggle_plus.png) no-repeat 4px 4px;
+    background:url(/public/img/bullet_toggle_plus.png) no-repeat 4px 4px;
 }
 
 .votes_against_own_bills.collapse_button,
 .factional_discipline_control.collapse_button,
 .general_discipline_control.collapse_button{
-    background:url(/static/img/bullet_toggle_minus.png) no-repeat 4px 4px;
+    background:url(/public/img/bullet_toggle_minus.png) no-repeat 4px 4px;
 }
 
 #cse-search-results iframe { padding-right: 4em; width:90%; direction:rtl; }
