@@ -14,7 +14,7 @@ var app = module.exports = express.createServer();
 app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'mustache');
-  app.set('view options',{layout:false});
+  app.set('view options',{layout:true});
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
