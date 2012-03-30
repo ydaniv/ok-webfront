@@ -13,8 +13,8 @@ var app = module.exports = express.createServer();
 
 app.configure(function(){
   app.set('views', __dirname + '/views');
-  app.set('view engine', 'hulk');
-  app.register('.hulk', hulk);
+  app.set('view engine', 'html');
+  app.register('.html', hulk);
   app.set('view options',{layout:true});
   app.use(express.bodyParser());
   app.use(express.methodOverride());
