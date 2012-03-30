@@ -31,10 +31,18 @@ if [ ! -f /usr/local/bin/node ]; then
   fi
 fi
 
-if [ -f /usr/local/bin/npm ]; then
-  echo "Found NPM. Will now install project dependencies"
-  cd $BASE_DIR
-  npm -d install
-else
-  echo "NPM is not installed on your machine.\nPlease ensure Node.js and NPM are properly installed under /usr/local and re-run this script"
+if [ ! -f /usr/local/bin/npm ]; then
+    echo "Shall I NPM?"
+    read reply
+    if [ "$reply" == "yes" -o "$reply" == "y" ]; then
+      curl http://npmjs.org/install.sh | sh
+    elif [ "$reply" == "no" -o "$reply" == "n" ]; then
+      echo "Download and install npm from http://npmjs"
+      read -p "Once npm is installed, press any key to continue..." -n1 -s
+    else
+      echo "Invalid choice... exiting"
+      exit 1
+    fi
 fi
+cd $BASE_DIR
+npm -d install
