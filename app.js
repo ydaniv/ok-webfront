@@ -7,7 +7,8 @@ var express = require('express')
     , hulk = require('hulk-hogan')
     , routes = require('./routes')
     , cluster = require('cluster')
-    , nconf = require('nconf');
+    , nconf = require('nconf')
+    , lingua = require('lingua'); 
 
 var app = module.exports = express.createServer();
 
@@ -18,11 +19,15 @@ app.configure(function(){
   app.set('view engine', 'html');
   app.register('.html', hulk);
   app.set('view options',{layout:true});
+  app.use(lingua(app, {
+    defaultLocale : 'he',
+    path          : __dirname + '/i18n'
+  }));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
-
+  
 });
 
 app.configure('development', function(){
