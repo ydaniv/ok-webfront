@@ -3,7 +3,7 @@
         <div>
             <h3>{{#_}}Edited by{{/_}}</h3>
             {{#editors}}
-                {{> user}}
+                {{> partials/user}}
             {{/editors}}
         </div>
         <div style="margin-bottom:4em;">
@@ -22,20 +22,20 @@
                     <td colspan="3" style="text-align:center">{{#_}}Agenda MKs{{/_}}</td>
                 </tr>
                 {{#mks}}
-                    {{> mk_list_item}}
+                    {{> partials/mk_list_item}}
                 {{/mks}}
             {{^all_mks}}
                 <tr>
                     <td colspan="3" style="text-align:center">{{#_}}Agenda Top MKs{{/_}}</td>
                 </tr>
                 {{#selected_mks_top}}
-                    {{> mk_list_item}}
+                    {{> partials/mk_list_item}}
                 {{/selected_mks_top}}
                 <tr>
                     <td colspan="3" style="text-align:center">{{#_}}Agenda Bottom MKs{{/_}}</td>
                 </tr>
                 {{#selected_mks_bottom}}
-                    {{> mk_list_item}}
+                    {{> partials/mk_list_item}}
                 {{/selected_mks_bottom}}
             {{/all_mks}}
             </table>
@@ -72,7 +72,7 @@
                     </td>
                     <td>
                         <div class="item">
-                            {{> vote_list_item}}
+                            {{> partials/vote_list_item}}
                             <span class="reasoning">
                                 {{{reasoning}}}
                             </span>
@@ -95,7 +95,7 @@
                         </td>
                         <td>
                             <div class="item">
-                                {{> committee_meeting_list_item}}
+                                {{> partials/committee_meeting_list_item}}
                                 <span class="reasoning">
                                     {{reasoning}}
                                 </span>

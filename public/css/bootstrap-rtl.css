@@ -110,8 +110,8 @@ textarea {
 body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 24px;
   color: #333333;
   background-color: #ffffff;
 }
@@ -287,10 +287,10 @@ a:hover {
   clear: both;
 }
 p {
-  margin: 0 0 9px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 13px;
 }
 p small {
   font-size: 11px;
@@ -2402,30 +2402,30 @@ button.btn.small, input[type="submit"].btn.small {
   margin-left: 0;
   margin-bottom: 3px;
 }
-.tabs-left .nav-tabs {
+.tabs-right .nav-tabs {
   float: right;
   margin-left: 19px;
   border-left: 1px solid #ddd;
 }
-.tabs-left .nav-tabs > li > a {
+.tabs-right .nav-tabs > li > a {
   margin-left: -1px;
   -webkit-border-radius: 4px 4px 0 0;
   -moz-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
 }
-.tabs-left .nav-tabs > li > a:hover {
+.tabs-right .nav-tabs > li > a:hover {
   border-color: #eeeeee #eeeeee #eeeeee #dddddd;
 }
-.tabs-left .nav-tabs .active > a, .tabs-left .nav-tabs .active > a:hover {
+.tabs-right .nav-tabs .active > a, .tabs-right .nav-tabs .active > a:hover {
   border-color: #ddd #ddd #ddd transparent;
   *border-left-color: #ffffff;
 }
-.tabs-right .nav-tabs {
+.tabs-left .nav-tabs {
   float: left;
   margin-right: 19px;
   border-right: 1px solid #ddd;
 }
-.tabs-right .nav-tabs > li > a {
+.tabs-left .nav-tabs > li > a {
   margin-right: -1px;
   -webkit-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
@@ -2434,7 +2434,7 @@ button.btn.small, input[type="submit"].btn.small {
 .tabs-right .nav-tabs > li > a:hover {
   border-color: #eeeeee #dddddd #eeeeee #eeeeee;
 }
-.tabs-right .nav-tabs .active > a, .tabs-right .nav-tabs .active > a:hover {
+.tabs-left .nav-tabs .active > a, .tabs-left .nav-tabs .active > a:hover {
   border-color: #ddd transparent #ddd #ddd;
   *border-right-color: #ffffff;
 }
