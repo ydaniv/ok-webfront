@@ -121,27 +121,15 @@
 			<div class="sidebar-container">
 		        <h3>יוזמי ההצעה</h3>
 			    <ul class="profile" id="#initiators">
+            {{#proposers}}
 				    <li class="">
-					    <a href="#" class="">
-						    <img src="http://placehold.it/26x38" alt="חברת הכנסת">
-						    <strong>זבולון אורלב</strong>
-						    <span>הבית היהודי</span>
-					    </a>
+            <a href="{{url}}" class="">
+              <img src="{{img_url}}" alt="חברת הכנסת">
+              <strong>{{name}}</strong>
+                <span>{{party}}</span>
+					  </a>
 				    </li>
-				    <li class="">
-					    <a href="#" class="">
-						    <img src="http://placehold.it/26x38" alt="חברת הכנסת">
-						    <strong>דניאל הרשקוביץ</strong>
-						    <span>הבית היהודי</span>
-					    </a>
-				    </li>
-				    <li class="">
-					    <a href="#" class="">
-						    <img src="http://placehold.it/26x38" alt="חברת הכנסת">
-						    <strong>פואד בן אליעזר</strong>
-						    <span>העבודה</span>
-					    </a>
-				    </li>
+            {{/proposers}}
 			    </ul>	
 			</div>
 <!-- נושאים -->
