@@ -261,8 +261,8 @@
 
 // Remove border on bottom, left, right
 .tabs-below .nav-tabs,
-.tabs-right .nav-tabs,
-.tabs-left .nav-tabs {
+.tabs-left .nav-tabs,
+.tabs-right .nav-tabs {
   border-bottom: 0;
 }
 
@@ -303,51 +303,51 @@
 // ------------
 
 // Common styles
-.tabs-left .nav-tabs > li,
-.tabs-right .nav-tabs > li {
+.tabs-right .nav-tabs > li,
+.tabs-left .nav-tabs > li {
   float: none;
 }
-.tabs-left .nav-tabs > li > a,
-.tabs-right .nav-tabs > li > a {
+.tabs-right .nav-tabs > li > a,
+.tabs-left .nav-tabs > li > a {
   min-width: 74px;
   margin-left: 0;
   margin-bottom: 3px;
 }
 
 // Tabs on the left
-.tabs-left .nav-tabs {
+.tabs-right .nav-tabs {
   float: right;
   margin-left: 19px;
   border-left: 1px solid #ddd;
 }
-.tabs-left .nav-tabs > li > a {
+.tabs-right .nav-tabs > li > a {
   margin-left: -1px;
   .border-radius(4px 0 0 4px);
 }
-.tabs-left .nav-tabs > li > a:hover {
+.tabs-right .nav-tabs > li > a:hover {
   border-color: @grayLighter #ddd @grayLighter @grayLighter;
 }
-.tabs-left .nav-tabs .active > a,
-.tabs-left .nav-tabs .active > a:hover {
+.tabs-right .nav-tabs .active > a,
+.tabs-right .nav-tabs .active > a:hover {
   border-color: #ddd transparent #ddd #ddd;
   *border-left-color: @white;
 }
 
 // Tabs on the right
-.tabs-right .nav-tabs {
+.tabs-left .nav-tabs {
   float: left;
   margin-right: 19px;
   border-right: 1px solid #ddd;
 }
-.tabs-right .nav-tabs > li > a {
+.tabs-left .nav-tabs > li > a {
   margin-right: -1px;
   .border-radius(0 4px 4px 0);
 }
-.tabs-right .nav-tabs > li > a:hover {
+.tabs-left .nav-tabs > li > a:hover {
   border-color: @grayLighter @grayLighter @grayLighter #ddd;
 }
-.tabs-right .nav-tabs .active > a,
-.tabs-right .nav-tabs .active > a:hover {
+.tabs-left .nav-tabs .active > a,
+.tabs-left .nav-tabs .active > a:hover {
   border-color: #ddd #ddd #ddd transparent;
   *border-right-color: @white;
 }
