@@ -11,14 +11,18 @@ Quick Start
 -----------
 
 
-Fork the repo: ``ok-templates.git`` by using the *Fork* button on github and::
+Fork the repo: ``ok-templates.git`` by using the *Fork* button on github.
+The only external dependecy is node.js so first get it for your platform
+from the `download page`_ and then::
 
     $ git clone git@github.com:yourusername/ok-templates.git
     $ cd ok-webfront
-    $ sudo ./install/install.sh
     $ node app.js
 
 and point your broser at http://localhost:3000
+
+
+.. _download page: http://nodejs.org/#download
 
 Designing
 ---------
