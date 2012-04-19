@@ -8,7 +8,7 @@ var express = require('express')
     , routes = require('./routes')
     , cluster = require('cluster')
     , nconf = require('nconf')
-    , lingua = require('lingua'); 
+    , lingua = require('lingua');
 
 var app = module.exports = express.createServer();
 
@@ -30,11 +30,20 @@ app.configure(function(){
   
 });
 
+app.configure('standalone', function(){
+  console.log('**standalone');
+  app.enable('standalone');
+  console.log(app.enabled('standalone'));
+  app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+});
+
 app.configure('development', function(){
+  console.log('**dev');
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
 
 app.configure('production', function(){
+  console.log('**prod');
   app.use(express.errorHandler());
 });
 
