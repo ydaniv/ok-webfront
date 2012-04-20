@@ -5,7 +5,6 @@
 
 var express = require('express')
     , hulk = require('hulk-hogan')
-    , routes = require('./routes')
     , cluster = require('cluster')
     , nconf = require('nconf')
     , lingua = require('lingua');
@@ -48,6 +47,7 @@ app.configure('production', function(){
 });
 
 // Routes
+var routes = require('./routes')(app);
 
 app.get('/', routes.index);
 app.get('/:controller/:action/:id', routes.get);
