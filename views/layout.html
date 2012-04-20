@@ -26,30 +26,37 @@
     <a href="http://oknesset.org/">http://oknesset.org/</a>
   </div>
   {{/DEBUG}}
-  <div class="navbar navbar-fixed-top"><div class="navbar-inner">
-    <div class="container-fluid">
-      <a class="brand" style="margin:5px; background:white; width:80px; padding:3px;" href="{{main_url}}">
-        <img src ="/img/oknesset-logo-small.png" alt="{{#_}}Open Knesset{{/_}}"/>
-      </a>
-      <div id="search" class="pull-right navbar-search">{{search_form}}</div>
-
-      <ul class="nav pull-right">
-        {{#user}}
-        <li><a href="#profile">{{#_}}Logged in as{{/_}} {{name}}</a></li>
-        <li><a href="#edit_profile">{{#_}}Edit Profile{{/_}}</a></li>
-        <li><a href="#logout">{{#_}}Logout{{/_}}</a></li>
-        {{/user}}
-        {{^user}}
-        <li><a href="#login">{{#_}}login{{/_}}</a></li>
-        {{/user}}
-      </ul>
-
-      <ul class="nav">
-        <li id="laws_link"><a href="#legislation">{{#_}}Legislation{{/_}}</a></li>
-        <li id="mks_link"><a href="#members">{{#_}}Members{{/_}}</a></li>
-      </ul>
-    </div></div>
-  </div>
+  
+  <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="{{main_url}}">כנסת פתוחה</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">חקיקה</a></li>
+              <li><a href="#">ועדות</a></li>
+              <li><a href="#">חברי כנסת</a></li>
+            </ul>
+            <div id="search" class="pull-right navbar-search">{{search_form}}</div>
+            <ul class="nav pull-right">
+		        {{#user}}
+		        <li><a href="#profile">{{#_}}Logged in as{{/_}} {{name}}</a></li>
+		        <li><a href="#edit_profile">{{#_}}Edit Profile{{/_}}</a></li>
+		        <li><a href="#logout">{{#_}}Logout{{/_}}</a></li>
+		        {{/user}}
+		        {{^user}}
+		        <li><a href="#login">{{#_}}login{{/_}}</a></li>
+		        {{/user}}
+		      </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
 
   <div id="main" class="container-fluid">
     {{{ body }}}
