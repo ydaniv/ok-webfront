@@ -29,16 +29,25 @@ app.configure(function(){
   
 });
 
+function init_dev() {
+  app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+}
+
+app.configure('local', function(){
+  console.log('** using local oknesset server');
+  app.enable('local');
+  init_dev();
+});
+
 app.configure('standalone', function(){
   console.log('**standalone');
   app.enable('standalone');
-  console.log(app.enabled('standalone'));
-  app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+  init_dev();
 });
 
 app.configure('development', function(){
   console.log('**dev');
-  app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+  init_dev();
 });
 
 app.configure('production', function(){
