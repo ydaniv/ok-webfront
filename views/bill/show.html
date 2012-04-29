@@ -268,11 +268,13 @@
 		        <h3>יוזמי ההצעה</h3>
 			    <ul class="profile" id="#initiators">
             {{#proposers}}
-				    <li class="">
-            <a href="{{url}}" class="">
+				    <li>
+            <a href="/member/{{id}}">
               <img src="{{img_url}}" alt="חברת הכנסת">
-              <strong>{{name}}</strong>
-                <span>{{party}}</span>
+              <strong>{{name}}</strong></a>
+              {{#party}}
+                <a href="/party/{{id}}"><span>{{name}}</span></a>
+              {{/party}}
 					  </a>
 				    </li>
             {{/proposers}}
