@@ -1,9 +1,23 @@
-<table>
-{{#objects}}
- <tr>
-    <td><a href="/bill/{{id}}"> {{title}}</a></td>
-    <td>{{stage}}</td>
- </tr>
-{{/objects}}
-</table>
+<div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th>שם</th>
+        <th>שלב</th>
+        <th>תאריך עדכון</th>
+        <th>חוק</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#objects}}
+      <tr>
+        <td><a href="{{absolute_url}}">{{title}}</a></td>
+        <td>{{stage}}</td>
+        <td>{{stage_date}}</td>
+        <td>{{#law}}{{title}}{{/law}}</td>
+      </tr>
+     {{/objects}}
+     </tbody>
+  </table>
+</div>
 
