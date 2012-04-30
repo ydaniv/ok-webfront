@@ -31,7 +31,8 @@ module.exports = function(app) {
           if ( err === null ) {
             res.render(controller + '/' + action + '.html', data);
           } else {
-            throw err;
+            console.log('ERROR',err);
+            res.end('');
           }
         });
       }
