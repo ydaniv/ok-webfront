@@ -32,7 +32,7 @@ module.exports = function(app) {
             res.render(controller + '/' + action + '.html', data);
           } else {
             console.log('ERROR',err);
-            res.end('');
+            res.end(null);
           }
         });
       }
