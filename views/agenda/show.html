@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/css/uijet.css"/>
+<link rel="stylesheet" href="/css/agenda_show.css"/>
+<div id="agenda">
+    <ul id="members_head" class="agenda_grid_head">
+        <li>Member</li>
+        <li>Score</li>
+    </ul>
+    <ul id="members" class="agenda_grid ">
+    {{#members}}
+        <li><a href="{{absolute_url}}">{{name}}</a> <strong>{{score}}</strong></li>
+    {{/members}}
+    </ul>
+    <ul id="parties_head" class="agenda_grid_head"></ul>
+    <ul id="parties"></ul>
+    <ul id="editors"></ul>
+    <ul id="votes"></ul>
+</div>
+<script>
+    var require = {
+        baseUrl : '/js',
+        deps    : ['jquery'],
+        paths   : {
+            jquery      : 'jquery.min',
+            uijet_dir   : 'lib/uijet',
+            plugins     : 'lib',
+            eventbox    : 'lib/eventbox',
+            mustache    : 'mustache'
+        },
+        callback: function () {
+            require(['apps/agenda'
+            ], function (app) {
+                app.init();
+            });
+        }
+    };
+</script>
+<script src="/js/require.js"></script>
