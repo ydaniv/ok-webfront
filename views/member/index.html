@@ -1,0 +1,16 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>שם</th>
+      <th>מפלגה</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#objects}}
+    <tr>
+      <td><a href="/member/{{id}}/">{{name}}</a></td>
+      <td>{{#party}}{{name}}{{/party}}</td>
+    </tr>
+   {{/objects}}
+   </tbody>
+</table>

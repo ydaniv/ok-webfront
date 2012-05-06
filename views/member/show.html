@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="span 4">
+    <h1>
+      {{name}} -
+      {{#party}}<a href="{{absolute_url}}">{{name}}</a>{{/party}}
+    </h1>
+    <h2>קישורים</h2>
+    <ul class="well">
+      <li><a href="mailto:{{email}}">דואל</a></li>
+      {{#links}}
+        <li><a href="{{url}}">{{title}}</a></li>
+      {{/links}}
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="span9">
+    <div class="row">
+      {{#agendas}}
+        <div class="span3 agenda-grade">
+          <div class="name"><a href="{{absolute_url}}">{{name}}</a></div>
+          <div class="owner">מאת: {{owner}}</div>
+          <div class="rank">{{rank}}</div>
+        </div>
+      {{/agendas}}
+    </div>
+  </div>
+</div>
+          
+
+
+
