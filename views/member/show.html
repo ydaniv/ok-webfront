@@ -1,16 +1,14 @@
+<link rel="stylesheet" href="/css/member.css"/>
 <div class="row">
+  <div class="span 1">
+    <img src="{{img_url}}" alt="התמונה של {{name}} מאתר הכנסת"/>
+  </div>
   <div class="span 4">
     <h1>
       {{name}} -
       {{#party}}<a href="{{absolute_url}}">{{name}}</a>{{/party}}
     </h1>
-    <h2>קישורים</h2>
-    <ul class="well">
-      <li><a href="mailto:{{email}}">דואל</a></li>
-      {{#links}}
-        <li><a href="{{url}}">{{title}}</a></li>
-      {{/links}}
-    </ul>
+    <p>{{current_role_description}}</p>
   </div>
 </div>
 <div class="row">
@@ -25,8 +23,24 @@
       {{/agendas}}
     </div>
   </div>
+  <div class="span3">
+    <ul class="well nav nav-list">
+      <li class="nav-header">קישורים</li>
+      <li><a href="mailto:{{email}}">דואל</a></li>
+      {{#links}}
+        <li><a href="{{url}}">{{title}}</a></li>
+      {{/links}}
+    </ul>
+    <dl class="dl-horizontal">
+      <dt>מגורים</dt>
+      <dd>{{place_of_residence}}</dd>
+      <dt>תאריך לידה</dt>
+      <dd>{{date_of_birth}}</dd>
+      <dt>מספר ילדים</dt>
+      <dd>{{number_of_children}}</dd>
+    </dl>
+   </div>
 </div>
-          
 
 
 
