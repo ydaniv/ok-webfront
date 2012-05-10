@@ -13,15 +13,26 @@
 </div>
 <div class="row">
   <div class="span9">
-    <div class="row">
+    <table class="table table-stripped">
+      <thead>
+        <tr>
+          <th>אג'נדה ואומרו</th>
+          <th></th>
+      </thead>
+      <tbody id="agendas">
+      </tbody>
+    </table>
+    {{=<% %>=}}<script type="text/html" id="agenda-template">
       {{#agendas}}
-        <div class="span3 agenda-grade">
-          <div class="name"><a href="{{absolute_url}}">{{name}}</a></div>
-          <div class="owner">מאת: {{owner}}</div>
-          <div class="rank">{{rank}}</div>
-        </div>
+      <tr>
+        <td>
+          <a href="{{absolute_url}}">{{name}}</a><br/>
+          מאת: {{owner}}
+        </td>
+        <td class="rank">{{rank}}</td>
+      </tr>
       {{/agendas}}
-    </div>
+    </script><%={{ }}=%>
   </div>
   <div class="span3">
     <ul class="well nav nav-list">
@@ -42,5 +53,24 @@
    </div>
 </div>
 
-
-
+<script>
+    var app = 'member';
+    // TODO: refactor to be handled by the node server
+    var require = {
+        baseUrl : '/js',
+        deps    : ['jquery'],
+        paths   : {
+            jquery      : 'jquery.min',
+            plugins     : 'lib',
+            eventbox    : 'lib/eventbox',
+            mustache    : 'mustache'
+        },
+        callback: function () {
+            require(['apps/'+app], function (app) {
+              // TODO: find a way to pass entire content to app.init
+              app.agendas("{{agendas_uri}}");
+            });
+        }
+    };
+</script>
+<script src="/js/require.js"></script>
