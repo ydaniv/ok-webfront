@@ -58,10 +58,11 @@ app.configure('production', function(){
 // Routes
 var routes = require('./routes')(app);
 
-app.get('/', routes.index);
 app.get('/:controller/:action/:id', routes.get);
 app.get('/:controller/:id', routes.get);
 app.get('/:controller', routes.get);
+app.get('/api/v2/*', routes.api);
+app.get('/', routes.index);
 
 // Run as cluster (node.js is web scale!)
 if (cluster.isMaster) {

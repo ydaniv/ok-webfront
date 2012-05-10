@@ -19,6 +19,12 @@ module.exports = function(app) {
      * @param req
      * @param res
      */
+    api: function(req, res, next){
+        console.log('LOG:  ', req.params.path);
+        rest.get(req.path.substr(7), function(err, data){
+              res.send(data)
+        })
+    },
     get: function(req, res, next){
       var controller = req.params.controller,
       id = req.params.id,
@@ -28,10 +34,10 @@ module.exports = function(app) {
         next();
       } else {
         rest.get(req.path, function(err, data){
-          if ( err === null ) {
-            res.render(controller + '/' + action + '.html', data);
-          } else {
-            console.log('ERROR',err);
+          if ( err === null )
+              res.render(controller + '/' + action + '.html', data)
+          else {
+            console.log('ERROR', err, req.path);
             res.end(null);
           }
         });
