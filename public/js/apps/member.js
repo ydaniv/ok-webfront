@@ -7,9 +7,14 @@ define([
     var app = {
         agendas : function (uri) {
             $.get(uri, function (data) {
-                var i;
                 var template = $("#agenda-template").html();
                 $("#agendas").html(Mustache.render(template, data));
+                for (var i in data.agendas) {
+                  var v=data.agendas[i];
+                  $("#agenda-score-"+v.id).css('right', (v.score+100)/2+'%');
+                  $("#agenda-bar-"+v.id).css('right', (v.min+100)/2+'%');
+                  $("#agenda-bar-"+v.id).css('width', (v.max-v.min)/2+'%');
+                }
             })
          }
     };
