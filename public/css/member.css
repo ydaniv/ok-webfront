@@ -1,3 +1,4 @@
+.table th {text-align: center;}
 #agendas .score-bar {width: 40%; vertical-align:middle;}
 #agendas .progress {margin-bottom:0; position:relative;}
 #agendas .score-bar div {display: block; }

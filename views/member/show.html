@@ -13,20 +13,23 @@
 </div>
 <div class="row">
   <div class="span9">
-    <table class="table table-stripped">
+    <table class="table table-striped">
       <thead>
         <tr>
-          <th>אג'נדה ואומרו</th>
-          <th></th>
+          <th>אג'נדה</th>
+          <th>חברי הכנסת, המפלגה והציון</th>
       </thead>
       <tbody id="agendas">
+        <tr>
+          <td colspan="2">טוען...</td>
+        </tr>
       </tbody>
     </table>
     {{=<% %>=}}<script type="text/html" id="agenda-template">
       {{#agendas}}
       <tr>
         <td>
-          <a href="{{absolute_url}}">{{name}}</a><br/>
+          <a href="{{absolute_url}}">{{name}}</a>
           מאת: {{owner}}
         </td>
         <td class="score-bar">
