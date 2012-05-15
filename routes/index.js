@@ -30,7 +30,8 @@ module.exports = function(app) {
       id = req.params.id,
       action = req.params.action || (id ? 'show' : 'index');
 
-      if(~req.path.indexOf('css') || ~req.path.indexOf('js') || ~req.path.indexOf('img')){
+      if(~req.path.indexOf('css') || ~req.path.indexOf('txt') ||
+         ~req.path.indexOf('js') || ~req.path.indexOf('img')){
         next();
       } else {
         rest.get(req.path, function(err, data){

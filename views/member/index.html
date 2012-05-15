@@ -1,7 +1,10 @@
-<table class="table">
+<link rel="stylesheet" href="/css/jquery.dataTables.css"/>
+<table id="members" class="table table-striped table-bordered">
   <thead>
     <tr>
       <th>שם</th>
+      <th>נוכמות בועדות</th>
+      <th>נוכמות במשכן</th>
       <th>מפלגה</th>
     </tr>
   </thead>
@@ -9,8 +12,32 @@
   {{#objects}}
     <tr>
       <td><a href="/member/{{id}}/">{{name}}</a></td>
+      <td>{{average_monthly_committee_presence}}</td>
+      <td>{{average_weekly_presence_hours}}</td>
       <td>{{#party}}{{name}}{{/party}}</td>
     </tr>
    {{/objects}}
    </tbody>
 </table>
+<script>
+    var app = 'member';
+    // TODO: refactor to be handled by the node server
+    var require = {
+        baseUrl : '/js',
+        deps    : ['jquery'],
+        paths   : {
+            jquery      : 'jquery.min',
+            dataTables  : 'lib/jquery.dataTables',
+            plugins     : 'lib',
+            eventbox    : 'lib/eventbox',
+            mustache    : 'mustache'
+        },
+        callback: function () {
+            require(['apps/'+app], function (app) {
+              // TODO: find a way to pass entire content to app.init
+              app.memberTable('#members');
+            });
+        }
+    };
+</script>
+<script src="/js/require.js"></script>

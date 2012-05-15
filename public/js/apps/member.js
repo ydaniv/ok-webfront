@@ -5,6 +5,11 @@ define([
 ], function ($, Ebox) {
     var Mustache = window.Mustache;
     var app = {
+        memberTable: function (table) {
+            $(table).dataTable({
+                "oLanguage": { "sUrl": "txt/dataTables.txt"}
+                });
+        },
         agendas : function (uri) {
             $.get(uri, function (data) {
                 data.agendas.sort(function(x,y) { return y.score-x.score});
@@ -21,6 +26,7 @@ define([
             })
          }
     };
+    $('#member-nav').addClass('active');
     return app;
 });
 
