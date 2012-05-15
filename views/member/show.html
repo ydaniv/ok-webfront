@@ -63,11 +63,11 @@
               <div style="clear:right;"></div>
 
             </div>
-            <div class="progress progress-info" style="height:3em;">
+            <div class="progress" style="height:3em;">
               <div class="bar all" style="height:100%;width:80%; right:10%">
                 <p style="padding-right:0.5em; text-align:right;"><em>חברי הכנסת</em></p>
               </div>
-              <div class="bar party" style="width:40%; right:40%"></div>
+              <div class="bar party" style="width:40%; right:40%; height:3em; margin-top:0.5em"></div>
               <p style="height:3em; position:absolute; margin-top:1em; width:40%; right:40%">
               <em>{{#party}}{{name}}{{/party}}</em>
               </p>
@@ -89,9 +89,9 @@
           מאת: {{owner}}
         </td>
         <td class="score-bar">
-            <div class="progress progress-info">
+            <div class="progress">
               <div id="agenda-bar-{{id}}" class="bar all"></div>
-              <div id="agenda-bar-party-{{id}}" class="bar party"></div>
+              <div id="agenda-bar-party-{{id}}" class="bar party" style="opacity:1;"></div>
               <div id="agenda-score-{{id}}" class="score"></div>
             </div>
         </td>
