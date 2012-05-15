@@ -39,20 +39,41 @@
   <div class="span9">
     <ul class="nav nav-tabs">
       <li class="active">
-        <a href="#">אג'נדות</a>
+        <a href="#">דגלים</a>
       </li>
       <li>
-        <a href="#">סטטיסטיקות</a>
+        <a href="#">חקיקה</a>
       </li>
       <li>
-        <a href="#">וידאו</a>
+        <a href="#">ועדות</a>
+      </li>
+      <li>
+        <a href="#">שטף</a>
       </li>
     </ul>
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>אג'נדה</th>
-          <th>חברי הכנסת, המפלגה והציון</th>
+          <th>דגל</th>
+          <th class="score-bar">
+            <div class="progress progress-info" style="height:3em;">
+              <div class="bar all" style="height:100%;width:80%; right:10%">
+                <p style="padding-right:0.5em; text-align:right;"><em>חברי הכנסת</em></p>
+              </div>
+              <div class="bar party" style="height:3em;width:40%; right:40%"></div>
+              <p style="height:3em; position:absolute; margin-top:1em; width:40%; right:40%">
+              <em>{{#party}}{{name}}{{/party}}</em>
+              </p>
+            </div>
+            <div style="width:100%">
+              <h4 style="float:right; width: 33%; margin: 0 0.2em 0.2em 0;text-align:right;">מתנגד</h4>
+              <h4 style="float:right; width: 33%; margin-bottom:0.2em;">אדיש</h4>
+              <h4 style="float:right; width: 33%; margin-bottom:0.2em;text-align:left;">תומך</h4>
+              <div style="clear:right;"></div>
+
+            </div>
+
+          </th>
       </thead>
       <tbody id="agendas">
         <tr>

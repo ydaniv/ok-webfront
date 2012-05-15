@@ -1,9 +1,10 @@
 .table th {text-align: center;}
-#agendas .score-bar {width: 40%; vertical-align:middle;}
-#agendas .progress {margin-bottom:0; position:relative;}
-#agendas .score-bar div {display: block; }
-#agendas .score-bar .all {position:absolute; width: 0%;}
-#agendas .score-bar .party {position:absolute; width: 0%;
+.score-bar {width: 40%; vertical-align:middle; }
+.progress {margin-bottom:0; position:relative;}
+.score-bar div {display: block; }
+.score-bar .all {position:absolute; width: 0%;}
+.score-bar .party {position:absolute; width: 0%;
+    height:66%; margin-top: 20%;
     vertical-align:middle;background-color:green;background-image:none;}
-#agendas .score-bar .score {position:absolute; border: 1px solid black;
-    height: 100%;}
+.score-bar .score {position:absolute; border: 1px solid black;
+    width:3px;height: 90%;}
