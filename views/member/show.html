@@ -1,15 +1,16 @@
 <link rel="stylesheet" href="/css/member.css"/>
+
 <div class="row">
   <div class="span3">
       <h1>
-        {{name}} -
-        {{#party}}<a href="{{absolute_url}}">{{name}}</a>{{/party}}
+        {{name}}
       </h1>
       <div class="row">
         <div class="span1">
+          <div style="text-align:center; margin-bottom:0.2em;">{{#party}}<a class="btn" href="{{absolute_url}}">{{name}}</a>{{/party}}</div>
           <img src="{{img_url}}" alt="התמונה של {{name}} מאתר הכנסת"/>
         </div>
-        <div class="span2">
+        <div style="float:right; padding-right: 0.2em;">
           <dl class="dl-horizontal" style="margin-top:0;">
             <dt>מגורים</dt>
             <dd>{{place_of_residence}}</dd>
@@ -21,7 +22,7 @@
         </div>
       </div>
       <p>{{current_role_description}}</p>
-    <ul class="well nav nav-list">
+    <ul class="nav nav-list">
       <li class="nav-header">קישורים</li>
       <li><a href="mailto:{{email}}">דואל</a></li>
       {{#links}}
@@ -30,6 +31,17 @@
     </ul>
    </div>
   <div class="span9">
+    <ul class="nav nav-tabs">
+      <li class="active">
+        <a href="#">אג'נדות</a>
+      </li>
+      <li>
+        <a href="#">סטטיסטיקות</a>
+      </li>
+      <li>
+        <a href="#">וידאו</a>
+      </li>
+    </ul>
     <table class="table table-striped">
       <thead>
         <tr>
