@@ -6,11 +6,11 @@
         {{name}}
       </h1>
       <div class="row">
-        <div class="span1">
-          <div style="text-align:center; margin-bottom:0.2em;">{{#party}}<a class="btn" href="{{absolute_url}}">{{name}}</a>{{/party}}</div>
+        <div class="span1" style="text-align:center;">
+          <div style="margin-bottom:0.2em;">{{#party}}<a class="btn" href="{{absolute_url}}">{{name}}</a>{{/party}}</div>
           <img src="{{img_url}}" alt="התמונה של {{name}} מאתר הכנסת"/>
         </div>
-        <div style="float:right; padding-right: 0.2em;">
+        <div class="span2">
           <dl class="dl-horizontal" style="margin-top:0;">
             <dt>מגורים</dt>
             <dd>{{place_of_residence}}</dd>
@@ -21,6 +21,12 @@
           </dl>
         </div>
       </div>
+      <dl class="dl-horizontal" style="margin-top:0;">
+        <dt>טלפון</dt>
+        <dd>{{phone}}</dd>
+        <dt>פקס</dt>
+        <dd>{{fax}}</dd>
+      </dl>
       <p>{{current_role_description}}</p>
     <ul class="nav nav-list">
       <li class="nav-header">קישורים</li>
