@@ -108,10 +108,11 @@
         baseUrl : '/js',
         deps    : ['jquery'],
         paths   : {
-            jquery      : 'jquery.min',
+            jquery      : 'lib/jquery.min',
             plugins     : 'lib',
             eventbox    : 'lib/eventbox',
-            mustache    : 'mustache'
+            datatables  : 'lib/jquery.dataTables.min',
+            mustache    : 'lib/mustache'
         },
         callback: function () {
             require(['apps/'+app], function (app) {
@@ -121,4 +122,4 @@
         }
     };
 </script>
-<script src="/js/require.js"></script>
+<script src="/js/lib/require.js"></script>
