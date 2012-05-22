@@ -3,18 +3,22 @@
   <thead>
     <tr>
       <th>שם</th>
-      <th>נוכמות בועדות</th>
-      <th>נוכמות במשכן</th>
       <th>מפלגה</th>
+      <th>נוכמות בועדות<h6>ממוצע ישיבות בחודש</h6></th>
+      <th>נוכמות במשכן<h6>שעות שבועיות בממוצע</h6></th>
+      <th>חוקים שהוצעו</th>
+      <th>חוקים שאושרו</th>
     </tr>
   </thead>
   <tbody>
   {{#objects}}
     <tr>
       <td><a href="/member/{{id}}/">{{name}}</a></td>
+      <td>{{#party}}{{name}}{{/party}}</td>
       <td>{{average_monthly_committee_presence}}</td>
       <td>{{average_weekly_presence_hours}}</td>
-      <td>{{#party}}{{name}}{{/party}}</td>
+      <td>{{bills_stats_proposed}}</td>
+      <td>{{bills_stats_approved}}</td>
     </tr>
    {{/objects}}
    </tbody>

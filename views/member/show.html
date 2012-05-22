@@ -51,53 +51,62 @@
         <a href="#">שטף</a>
       </li>
     </ul>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th style="vertical-align: top;"></th>
-          <th class="score-bar">
-            <div style="width:100%">
-              <h4 style="float:right; width: 33%; margin: 0 0.2em 0.2em 0;text-align:right;">מתנגד</h4>
-              <h4 style="float:right; width: 33%; margin-bottom:0.2em;">אדיש</h4>
-              <h4 style="float:right; width: 33%; margin-bottom:0.2em;text-align:left;">תומך</h4>
-              <div style="clear:right;"></div>
+    <div id="bills-tab">
+      <h3>הצעות המחכות על שולחן הכנסת ({{bills_stats_proposed}})</h3>
+      <h3>הצעות המחכות לקריאה ראשונה ({{bills_stats_pre}})</h3>
+      <h3>הצעות המחכות לדיון בוועדה ({{bills_stats_first}})</h3>
+      <h3>הצעות שאושרו ({{bills_stats_first}})</h3>
+    </div>
 
-            </div>
-            <div class="progress" style="height:3em;">
-              <div class="bar all" style="height:100%;width:80%; right:10%">
-                <p style="padding-right:0.5em; text-align:right;"><em>חברי הכנסת</em></p>
+    <div id="agendas-tab">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th style="vertical-align: top;"></th>
+            <th class="score-bar">
+              <div style="width:100%">
+                <h4 style="float:right; width: 33%; margin: 0 0.2em 0.2em 0;text-align:right;">מתנגד</h4>
+                <h4 style="float:right; width: 33%; margin-bottom:0.2em;">אדיש</h4>
+                <h4 style="float:right; width: 33%; margin-bottom:0.2em;text-align:left;">תומך</h4>
+                <div style="clear:right;"></div>
+
               </div>
-              <div class="bar party" style="width:40%; right:40%; height:3em; margin-top:0.5em"></div>
-              <p style="height:3em; position:absolute; margin-top:1em; width:40%; right:40%">
-              <em>{{#party}}{{name}}{{/party}}</em>
-              </p>
-            </div>
+              <div class="progress" style="height:3em;">
+                <div class="bar all" style="height:100%;width:80%; right:10%">
+                  <p style="padding-right:0.5em; text-align:right;"><em>חברי הכנסת</em></p>
+                </div>
+                <div class="bar party" style="width:40%; right:40%; height:3em; margin-top:0.5em"></div>
+                <p style="height:3em; position:absolute; margin-top:1em; width:40%; right:40%">
+                <em>{{#party}}{{name}}{{/party}}</em>
+                </p>
+              </div>
 
-          </th>
-      </thead>
-      <tbody id="agendas">
+            </th>
+        </thead>
+        <tbody id="agendas">
+          <tr>
+            <td colspan="2">טוען...</td>
+          </tr>
+        </tbody>
+      </table>
+      {{=<% %>=}}<script type="text/html" id="agenda-template">
+        {{#agendas}}
         <tr>
-          <td colspan="2">טוען...</td>
+          <td>
+            <a href="{{absolute_url}}">{{name}}</a>
+            מאת: {{owner}}
+          </td>
+          <td class="score-bar">
+              <div class="progress">
+                <div id="agenda-bar-{{id}}" class="bar all"></div>
+                <div id="agenda-bar-party-{{id}}" class="bar party" style="opacity:1;"></div>
+                <div id="agenda-score-{{id}}" class="score"></div>
+              </div>
+          </td>
         </tr>
-      </tbody>
-    </table>
-    {{=<% %>=}}<script type="text/html" id="agenda-template">
-      {{#agendas}}
-      <tr>
-        <td>
-          <a href="{{absolute_url}}">{{name}}</a>
-          מאת: {{owner}}
-        </td>
-        <td class="score-bar">
-            <div class="progress">
-              <div id="agenda-bar-{{id}}" class="bar all"></div>
-              <div id="agenda-bar-party-{{id}}" class="bar party" style="opacity:1;"></div>
-              <div id="agenda-score-{{id}}" class="score"></div>
-            </div>
-        </td>
-      </tr>
-      {{/agendas}}
-    </script><%={{ }}=%>
+        {{/agendas}}
+      </script><%={{ }}=%>
+    </div>
   </div>
 </div>
 
