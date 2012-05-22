@@ -27,3 +27,4 @@
     vertical-align:middle;}
 .score-bar .score {position:absolute; border: 1px solid black;
     width:3px;height: 90%;}
+.dataTables_paginate {display: none;}
