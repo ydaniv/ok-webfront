@@ -28,6 +28,16 @@ define([
                   $("#agenda-bar-party-"+v.id).css('width', (v.party_max-v.party_min+1)/2+'%');
                 }
             })
+         },
+        bills : function (uri) {
+            $.get(uri, function (data) {
+                var template = $("#bill-template").html();
+                $("#bills").html(Mustache.render(template, data));
+                $('#bills-tab>table').dataTable({
+                      "oLanguage": { "sUrl": "txt/dataTables.txt"},
+                      "iDisplayLength": 25
+                      });
+                })
          }
     };
     $('#member-nav').addClass('active');

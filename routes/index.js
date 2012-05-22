@@ -20,7 +20,7 @@ module.exports = function(app) {
      * @param res
      */
     api: function(req, res, next){
-        console.log('LOG:  ', req.params.path);
+        console.log('LOG: API call to ', req.params.path);
         rest.get(req.path.substr(7), function(err, data){
               res.send(data)
         })

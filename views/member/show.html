@@ -52,7 +52,7 @@
       </li>
     </ul>
     <div class="tab-content">
-      <div id="agendas-tab" class="tab-pane">
+      <div id="agendas-tab" class="tab-pane active">
         <table class="table table-striped">
           <thead>
             <tr>
@@ -150,6 +150,7 @@
             require(['apps/'+app], function (app) {
               // TODO: find a way to pass entire content to app.init
               app.agendas("{{agendas_uri}}");
+              app.bills("{{bills_uri}}");
             });
         }
     };
