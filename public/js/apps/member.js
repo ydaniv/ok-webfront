@@ -2,6 +2,7 @@ define([
     'jquery',
     'eventbox',
     'datatables',
+    'btabs',
     'mustache'
 ], function ($, Ebox) {
     var Mustache = window.Mustache;
