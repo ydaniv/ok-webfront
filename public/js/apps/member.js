@@ -8,7 +8,9 @@ define([
     var app = {
         memberTable: function (table) {
             $(table).dataTable({
-                "oLanguage": { "sUrl": "txt/dataTables.txt"}
+                "oLanguage": { "sUrl": "txt/dataTables.txt"},
+                "iDisplayLength": 999,
+                "bLengthChange": false
                 });
         },
         agendas : function (uri) {
