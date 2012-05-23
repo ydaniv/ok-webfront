@@ -20,10 +20,11 @@ module.exports = function(app) {
      * @param res
      */
     api: function(req, res, next){
-        console.log('LOG: API call to ', req.params.path);
-        rest.get(req.path.substr(7), function(err, data){
+       var uri = req.originalUrl.substr(7)
+       console.log('LOG: API call to ', uri);
+       rest.get(uri, function(err, data){
               res.send(data)
-        })
+       })
     },
     get: function(req, res, next){
       var controller = req.params.controller,
@@ -31,7 +32,8 @@ module.exports = function(app) {
       action = req.params.action || (id ? 'show' : 'index');
 
       if(~req.path.indexOf('css') || ~req.path.indexOf('txt') ||
-         ~req.path.indexOf('js') || ~req.path.indexOf('img')){
+         ~req.path.indexOf('js') || ~req.path.indexOf('img') ||
+           controller == 'api') {
         next();
       } else {
         rest.get(req.path, function(err, data){
