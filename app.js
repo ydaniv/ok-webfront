@@ -52,6 +52,7 @@ app.configure('development', function(){
 
 app.configure('production', function(){
   console.log('**prod');
+  app.disable('view cache');
   app.use(express.errorHandler());
 });
 
